@@ -1,0 +1,29 @@
+.Upload {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .creditBtn {
+    font-size: 1.5vw;
+  }
+  .uploadContainer {
+    border: 1px solid black;
+    .uploadTemplate {
+      .title {
+        font-weight: 500;
+      }
+      .imgContainer {
+        width: 20vw;
+        height: 25vw;
+        .imgParent {
+          width: 100%;
+          height: 100%;
+        }
+        .uploadBtnContainer {
+          border: 1px solid black;
+        }
+      }
+    }
+  }
+}

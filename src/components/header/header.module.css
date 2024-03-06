@@ -1,0 +1,14 @@
+.Header {
+  /* border: 1px solid red; */
+  padding: 1vw 3vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18vw;
+  }
+}
