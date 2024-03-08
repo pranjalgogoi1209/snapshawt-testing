@@ -214,7 +214,7 @@
       font-size: 3vw;
     }
     .swapNowBtn {
-      font-size: 4vw;
+      font-size: 5vw;
     }
     .uploadContainer {
       /* border: 1px solid black; */
@@ -232,7 +232,7 @@
           width: 45vw;
           height: 53vw;
           .uploadBtnContainer {
-            gap: 2vw;
+            gap: 3vw;
             .btnParent {
               width: 8vw;
               padding: 1.6vw;
@@ -252,7 +252,7 @@
     height: 53vw;
     border: 0.4vw solid transparent;
     .captureBtnContainer {
-      gap: 2vw;
+      gap: 3vw;
       .btnParent {
         width: 8vw;
         padding: 1.6vw;
