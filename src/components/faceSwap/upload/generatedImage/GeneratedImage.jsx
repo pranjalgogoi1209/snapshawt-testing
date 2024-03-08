@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "./generatedImage.module.css";
 import close from "./../../../../assets/faceSwap/generatedImage/close.png";
 import { animateScroll as scroll } from "react-scroll";
@@ -12,6 +12,11 @@ export default function GeneratedImage({
   uploadPhotoImg,
   capturedImg,
 }) {
+  const swapImgRef = useRef(null);
+  const [output, setOutput] = useState();
+  const [isSwapped, setIsSwapped] = useState(false);
+
+  // handleTryAgain
   const handleTryAgain = () => {
     setIsGeneratedImageOpen(false);
     if (uploadContainerRef) {
@@ -22,6 +27,23 @@ export default function GeneratedImage({
     }
     setGeneratedImg("");
   };
+
+  // handleSwapImage
+  const handleSwapImage = e => {
+    if (!isSwapped) {
+      uploadPhotoImg ? setOutput(uploadPhotoImg) : setOutput(capturedImg);
+      swapImgRef.current.src = generatedImg;
+      console.dir(swapImgRef.current.src);
+      setIsSwapped(true);
+    } else {
+      setOutput("");
+      uploadPhotoImg
+        ? (swapImgRef.current.src = uploadPhotoImg)
+        : (swapImgRef.current.src = capturedImg);
+      setIsSwapped(false);
+    }
+  };
+
   return (
     <section className={styles.GeneratedImage}>
       {generatedImg ? (
@@ -34,7 +56,10 @@ export default function GeneratedImage({
             <div className={styles.parent}>
               {generatedImg && (
                 <div className={styles.imgParent}>
-                  <img src={generatedImg} alt="generated-image" />
+                  <img
+                    src={output ? output : generatedImg}
+                    alt="generated-image"
+                  />
                 </div>
               )}
 
@@ -43,8 +68,10 @@ export default function GeneratedImage({
                 {(uploadPhotoImg || capturedImg) && (
                   <div className={styles.imgSwap}>
                     <img
+                      ref={swapImgRef}
                       src={uploadPhotoImg ? uploadPhotoImg : capturedImg}
                       alt="img-swap"
+                      onClick={e => handleSwapImage(e)}
                     />
                   </div>
                 )}

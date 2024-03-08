@@ -63,13 +63,14 @@
       align-items: flex-end;
       padding: 1vw;
       .imgSwap {
-        border: 1px solid black;
-        width: 3vw;
-        height: 3vw;
+        /* border: 1px solid black; */
+        width: 3.5vw;
+        height: 3.5vw;
         cursor: pointer;
-        border-radius: 1.5vw;
+        border-radius: 50%;
         img {
-          border-radius: 1.5vw;
+          border-radius: 50%;
+          border: 0.1vw solid #fff;
         }
       }
       .shareOptions {

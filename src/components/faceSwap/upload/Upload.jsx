@@ -75,12 +75,12 @@ export default function Upload({
       };
       reader.readAsDataURL(file);
     }
+    setCapturedImg("");
     setIsWebcamOpen(false);
   };
   const handleUploadPhoto2 = () => {
     console.log("uploading photo", uploadPhotoRef2.current);
     uploadPhotoRef2.current.click();
-    setCapturedImg("");
     setUploadPhotoImg("");
   };
 
