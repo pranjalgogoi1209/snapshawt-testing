@@ -31,6 +31,8 @@
     .uploadYourPhoto {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       gap: 1vw;
       .title {
         font-weight: 700;
@@ -222,22 +224,22 @@
       .uploadYourPhoto {
         gap: 2vw;
         .title {
-          font-size: 4vw;
-          line-height: 5vw;
+          font-size: 5vw;
+          line-height: 6vw;
         }
         .imgContainer {
           border: 0.4vw solid transparent;
-          width: 42vw;
-          height: 50vw;
+          width: 45vw;
+          height: 53vw;
           .uploadBtnContainer {
             gap: 2vw;
             .btnParent {
-              width: 7vw;
+              width: 8vw;
               padding: 1.6vw;
             }
             p {
-              font-size: 2.6vw;
-              width: 10vw;
+              font-size: 3.6vw;
+              width: 15vw;
             }
           }
         }
@@ -246,18 +248,18 @@
   }
 
   .webcamContainer {
-    width: 42vw;
-    height: 50vw;
+    width: 45vw;
+    height: 53vw;
     border: 0.4vw solid transparent;
     .captureBtnContainer {
       gap: 2vw;
       .btnParent {
-        width: 7vw;
+        width: 8vw;
         padding: 1.6vw;
       }
       p {
-        font-size: 2.6vw;
-        width: 10vw;
+        font-size: 3.6vw;
+        width: 15vw;
       }
     }
   }
