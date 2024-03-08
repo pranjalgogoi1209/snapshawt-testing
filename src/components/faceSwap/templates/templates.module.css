@@ -12,6 +12,7 @@
     text-align: center;
     font-size: 2.5vw;
     line-height: 2.5vw;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
   }
   .templateContainer {
     display: flex;
@@ -24,6 +25,23 @@
       cursor: pointer;
       img {
         border-radius: 1.5vw;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .Templates {
+    padding: 6vw;
+    gap: 6vw;
+    .title {
+      font-size: 5vw;
+      line-height: 5vw;
+    }
+    .templateContainer {
+      gap: 6vw;
+      .imgContainer {
+        width: 25vw;
       }
     }
   }

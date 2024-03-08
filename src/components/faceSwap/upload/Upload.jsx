@@ -156,7 +156,7 @@ export default function Upload({
   return (
     <div className={styles.Upload} ref={uploadContainerRef}>
       {/* credit btn */}
-      <button className={`btn2 ${styles.creditBtn}`}>Credit = 5</button>
+      {/* <button className={`btn2 ${styles.creditBtn}`}>Credit = 5</button> */}
 
       {/* upload */}
       <div className={styles.uploadContainer}>

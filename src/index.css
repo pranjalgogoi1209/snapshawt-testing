@@ -24,6 +24,8 @@ img {
 }
 
 .btn1 {
+  border: none;
+  outline: none;
   color: #fff;
   padding: 0.5vw 1vw;
   background: linear-gradient(to right, #ff93df, #7a21bb);

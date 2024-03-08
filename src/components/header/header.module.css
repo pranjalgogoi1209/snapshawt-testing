@@ -17,11 +17,21 @@
     align-items: center;
     width: 18vw;
   }
+  .rightContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    /* border: 1px solid black; */
+    .creditBtn {
+      font-size: 1.2vw;
+      font-weight: 600;
+    }
+  }
   .bar {
     display: none;
     cursor: pointer;
     svg {
-      font-size: 5vw;
       color: #7a21bb;
     }
   }
@@ -34,11 +44,22 @@
     .logoContainer {
       width: 36vw;
     }
+    .rightContainer {
+      gap: 4vw;
+      /* border: 1px solid black; */
+      .creditBtn {
+        font-size: 2.4vw;
+        font-weight: 600;
+      }
+    }
     .desktopNavbar {
       display: none;
     }
     .bar {
       display: flex;
+      svg {
+        font-size: 5vw;
+      }
     }
   }
 }

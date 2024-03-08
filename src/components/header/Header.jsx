@@ -13,7 +13,7 @@ export default function Header() {
           <img src={logoHeader} alt="logo" />
         </Link>
       </div>
-      <div>
+      <div className={styles.rightContainer}>
         {/* desktop navbar */}
         <div className={styles.desktopNavbar}>
           <DesktopNavbar />
@@ -23,6 +23,9 @@ export default function Header() {
         {/* <div className={styles.DesktopNavbar}>
           <DesktopNavbar />
         </div> */}
+
+        {/* credit btn */}
+        <button className={`btn1 ${styles.creditBtn}`}>Credit = 5</button>
 
         <div className={styles.bar}>
           <FaBarsStaggered />
