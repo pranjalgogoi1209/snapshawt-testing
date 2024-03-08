@@ -107,7 +107,7 @@
   }
   .close {
     position: absolute;
-    top: 4vw;
+    top: 5vw;
     right: 2vw;
     width: 1.7vw;
     cursor: pointer;
@@ -116,41 +116,40 @@
 
 @media all and (max-width: 480px) {
   .GeneratedImage {
-    gap: 4vw;
     .parentAll {
-      gap: 4vw;
+      gap: 6vw;
     }
     .title {
-      font-size: 4vw;
-      line-height: 5vw;
+      font-size: 6vw;
+      line-height: 7.5vw;
     }
     .imgContainer {
-      border: 0.4vw solid transparent;
-      width: 42vw;
-      height: 50vw;
+      border: 0.6vw solid transparent;
+      width: 63vw;
+      height: 75vw;
       .container {
-        padding: 2vw;
+        padding: 3vw;
         .imgSwap {
-          width: 7vw;
-          height: 7vw;
+          width: 10.5vw;
+          height: 10.5vw;
         }
         .shareOptions {
-          gap: 4vw;
+          gap: 6vw;
           .download,
           .share {
-            width: 5vw;
-            height: 5vw;
+            width: 7.5vw;
+            height: 7.5vw;
           }
         }
       }
     }
     .tryAgain {
-      font-size: 3vw;
+      font-size: 4.5vw;
     }
     .close {
-      top: 12vw;
-      right: 4vw;
-      width: 3.4vw;
+      top: 15vw;
+      right: 6vw;
+      width: 5.1vw;
     }
   }
 }
