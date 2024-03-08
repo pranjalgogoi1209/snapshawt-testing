@@ -3,6 +3,7 @@ import styles from "./header.module.css";
 import DesktopNavbar from "./desktopNavbar/DesktopNavbar";
 import { Link } from "react-router-dom";
 import logoHeader from "./../../assets/header/logoHeader.png";
+import { FaBarsStaggered } from "react-icons/fa6";
 
 export default function Header() {
   return (
@@ -14,7 +15,7 @@ export default function Header() {
       </div>
       <div>
         {/* desktop navbar */}
-        <div className={styles.DesktopNavbar}>
+        <div className={styles.desktopNavbar}>
           <DesktopNavbar />
         </div>
 
@@ -22,6 +23,10 @@ export default function Header() {
         {/* <div className={styles.DesktopNavbar}>
           <DesktopNavbar />
         </div> */}
+
+        <div className={styles.bar}>
+          <FaBarsStaggered />
+        </div>
       </div>
     </header>
   );

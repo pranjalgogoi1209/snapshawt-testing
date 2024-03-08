@@ -17,4 +17,28 @@
     align-items: center;
     width: 18vw;
   }
+  .bar {
+    display: none;
+    cursor: pointer;
+    svg {
+      font-size: 5vw;
+      color: #7a21bb;
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .Header {
+    /* border: 1px solid black; */
+    padding: 2vw 6vw;
+    .logoContainer {
+      width: 36vw;
+    }
+    .desktopNavbar {
+      display: none;
+    }
+    .bar {
+      display: flex;
+    }
+  }
 }

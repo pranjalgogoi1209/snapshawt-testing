@@ -204,10 +204,15 @@
 @media all and (max-width: 480px) {
   .Upload {
     /* border: 1px solid black; */
+    margin-top: 14vw;
+    padding: 6vw;
     gap: 4vw;
     .creditBtn,
     .swapNowBtn {
       font-size: 3vw;
+    }
+    .swapNowBtn {
+      font-size: 4vw;
     }
     .uploadContainer {
       /* border: 1px solid black; */
@@ -224,6 +229,7 @@
           width: 42vw;
           height: 50vw;
           .uploadBtnContainer {
+            gap: 2vw;
             .btnParent {
               width: 7vw;
               padding: 1.6vw;
