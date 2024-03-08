@@ -13,6 +13,7 @@ export default function FaceSwapPage() {
       {/* upload section */}
       <Upload
         selectedTemplate={selectedTemplate}
+        setSelectedTemplate={setSelectedTemplate}
         setUploadTemplateImg={setUploadTemplateImg}
         uploadTemplateImg={uploadTemplateImg}
         uploadContainerRef={uploadContainerRef}

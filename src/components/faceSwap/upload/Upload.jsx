@@ -1,12 +1,17 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "./upload.module.css";
 import upload from "./../../../assets/faceSwap/upload/upload.png";
 import uploadBtn from "./../../../assets/faceSwap/upload/uploadBtn.png";
 import captureBtn from "./../../../assets/faceSwap/upload/captureBtn.png";
 import Webcam from "react-webcam";
+import GeneratedImage from "./generatedImage/GeneratedImage";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Upload({
   selectedTemplate,
+  setSelectedTemplate,
   setUploadTemplateImg,
   uploadTemplateImg,
   uploadContainerRef,
@@ -14,27 +19,42 @@ export default function Upload({
   const textRef = useRef(null);
   const uploadPhotoRef = useRef(null);
   const uploadPhotoRef2 = useRef(null);
-  const uploadCaptureRef = useRef(null);
   const uploadTemplateRef = useRef(null);
-  const [uploadPhotoImg, setUploadPhotoImg] = useState("");
   const webRef = useRef();
+  const [uploadPhotoImg, setUploadPhotoImg] = useState("");
   const [isWebcamOpen, setIsWebcamOpen] = useState(false);
   const [capturedImg, setCapturedImg] = useState("");
+  const [isGeneratedImageOpen, setIsGeneratedImageOpen] = useState(false);
+  const [generatedImg, setGeneratedImg] = useState();
+
   // upload template
   const handleUploadTemplateChange = e => {
-    console.log(e.target.files[0]);
-    setUploadTemplateImg(e.target.files[0]);
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setUploadTemplateImg(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
   };
   const handleUploadTemplate = () => {
     console.log("uploading template");
     uploadTemplateRef.current.click();
+    setSelectedTemplate("");
   };
 
   // upload photo
   const handleUploadPhotoChange = e => {
     console.log("onchange working");
-    console.log(e.target.files[0]);
-    setUploadPhotoImg(e.target.files[0]);
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setUploadPhotoImg(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
   };
   const handleUploadPhoto = () => {
     console.log("uploading photo");
@@ -47,8 +67,14 @@ export default function Upload({
   // upload photo from capture image
   const handleUploadPhotoChange2 = e => {
     console.log("onchange working");
-    console.log(e.target.files[0]);
-    setUploadPhotoImg(e.target.files[0]);
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setUploadPhotoImg(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
     setIsWebcamOpen(false);
   };
   const handleUploadPhoto2 = () => {
@@ -69,7 +95,64 @@ export default function Upload({
       textRef.current.innerText = "Capture";
     }
   };
-  // uploadPhotoRef2 && console.log(uploadPhotoRef2);
+
+  // toast options
+  const toastOptions = {
+    position: "top-left",
+    autoClose: 4000,
+    pauseOnHover: true,
+    draggable: true,
+    theme: "light",
+  };
+
+  // handleSwapNow
+  const handleSwapNow = () => {
+    // api calling
+    if (
+      (selectedTemplate || uploadTemplateImg) &&
+      (capturedImg || uploadPhotoImg)
+    ) {
+      setIsGeneratedImageOpen(true);
+      let userImage;
+      if (capturedImg) {
+        userImage = capturedImg;
+      } else if (uploadPhotoImg) {
+        userImage = uploadPhotoImg;
+      }
+
+      let template;
+      if (selectedTemplate) {
+        template = selectedTemplate;
+      } else if (uploadTemplateImg) {
+        template = uploadTemplateImg;
+      }
+
+      axios
+        .post("https://953e-103-17-110-127.ngrok-free.app/rec", {
+          image: userImage.split(",")[1],
+          choice: template.split(",")[1],
+        })
+        .then(function (response) {
+          console.log(response);
+          setGeneratedImg(`data:image/webp;base64,${response.data.result}`);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    } else {
+      toast.error("Please upload or select images...", toastOptions);
+    }
+  };
+
+  // Disable scrolling when isGeneratedImageOpen is true
+  useEffect(() => {
+    if (isGeneratedImageOpen) {
+      document.body.classList.add(styles.disableScroll);
+    } else {
+      document.body.classList.remove(styles.disableScroll);
+    }
+  }, [isGeneratedImageOpen]);
+
   return (
     <div className={styles.Upload} ref={uploadContainerRef}>
       {/* credit btn */}
@@ -89,7 +172,7 @@ export default function Upload({
               <img
                 src={
                   uploadTemplateImg
-                    ? URL.createObjectURL(uploadTemplateImg)
+                    ? uploadTemplateImg
                     : selectedTemplate
                     ? selectedTemplate
                     : upload
@@ -131,11 +214,7 @@ export default function Upload({
               <div className={styles.imgContainer}>
                 <div className={styles.imgParent}>
                   <img
-                    src={
-                      uploadPhotoImg
-                        ? URL.createObjectURL(uploadPhotoImg)
-                        : upload
-                    }
+                    src={uploadPhotoImg ? uploadPhotoImg : upload}
                     alt="upload template"
                   />
                 </div>
@@ -220,7 +299,22 @@ export default function Upload({
       </div>
 
       {/* swap now btn */}
-      <button className={`btn2 ${styles.swapNowBtn}`}>Swap Now</button>
+      <button className={`btn2 ${styles.swapNowBtn}`} onClick={handleSwapNow}>
+        Swap Now
+      </button>
+
+      {isGeneratedImageOpen && (
+        <GeneratedImage
+          setIsGeneratedImageOpen={setIsGeneratedImageOpen}
+          uploadContainerRef={uploadContainerRef}
+          generatedImg={generatedImg}
+          setGeneratedImg={setGeneratedImg}
+          uploadPhotoImg={uploadPhotoImg}
+          capturedImg={capturedImg}
+        />
+      )}
+
+      <ToastContainer />
     </div>
   );
 }

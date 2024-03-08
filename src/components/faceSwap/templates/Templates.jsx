@@ -18,6 +18,17 @@ export default function Templates({
       });
     }
   };
+
+  // converting selected template to base64 format
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
+
+  const getImageData = img => {
+    canvas.width = img.width;
+    canvas.height = img.height;
+    context.drawImage(img, 0, 0);
+    return canvas.toDataURL("image/png");
+  };
   return (
     <section className={styles.Templates}>
       <p className={`grd-txt ${styles.title}`}>Choose from our Templates</p>
@@ -25,7 +36,15 @@ export default function Templates({
         {templatesArr?.map((template, index) => (
           <div
             key={index}
-            onClick={() => handleSelectTemplate(template)}
+            onClick={() => {
+              var img = new Image();
+              img.src = template;
+              img.onload = () => {
+                // console.log("template=>", template);
+                setSelectedTemplate(getImageData(img));
+              };
+              handleSelectTemplate(template);
+            }}
             className={styles.imgContainer}
           >
             <img src={template} alt="template" />

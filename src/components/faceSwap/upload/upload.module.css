@@ -1,3 +1,7 @@
+.disableScroll {
+  overflow: hidden;
+}
+
 .Upload {
   margin-top: 7vw;
   padding: 3vw;
