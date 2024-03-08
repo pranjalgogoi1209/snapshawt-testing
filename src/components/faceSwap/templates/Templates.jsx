@@ -12,7 +12,7 @@ export default function Templates({
     setSelectedTemplate(template);
     setUploadTemplateImg("");
     if (uploadContainerRef) {
-      scroll.scrollTo(uploadContainerRef.current.offsetTop, {
+      scroll.scrollTo(uploadContainerRef.current.offsetTop - 100, {
         duration: 500,
         smooth: "easeInOutQuart",
       });

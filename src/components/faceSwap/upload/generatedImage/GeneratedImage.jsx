@@ -51,7 +51,7 @@ export default function GeneratedImage({
   return (
     <section className={styles.GeneratedImage}>
       {generatedImg ? (
-        <div className={styles.GeneratedImage}>
+        <div className={styles.parentAll}>
           <p className={`grd-txt ${styles.title}`}>
             Hurry! Your Snapshawt <br /> Is Ready To Share
           </p>
