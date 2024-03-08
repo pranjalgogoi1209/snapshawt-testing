@@ -42,6 +42,7 @@
     }
 
     .container {
+      border: 1px solid red;
       border-radius: 1.5vw;
       background: linear-gradient(
         to top,
@@ -74,7 +75,15 @@
         }
       }
       .shareOptions {
-        border: 1px solid black;
+        /* border: 1px solid black; */
+        display: flex;
+        gap: 2vw;
+        .download,
+        .share {
+          width: 2.5vw;
+          height: 2.5vw;
+          cursor: pointer;
+        }
       }
     }
   }

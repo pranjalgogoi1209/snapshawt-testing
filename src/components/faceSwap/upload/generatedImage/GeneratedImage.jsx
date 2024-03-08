@@ -3,6 +3,9 @@ import styles from "./generatedImage.module.css";
 import close from "./../../../../assets/faceSwap/generatedImage/close.png";
 import { animateScroll as scroll } from "react-scroll";
 import Loading from "../../../loading/Loading";
+import download from "./../../../../assets/faceSwap/generatedImage/download.png";
+import share from "./../../../../assets/faceSwap/generatedImage/share.png";
+import exportAsImage from "../../../../utils/exportAsImage";
 
 export default function GeneratedImage({
   setIsGeneratedImageOpen,
@@ -12,6 +15,7 @@ export default function GeneratedImage({
   uploadPhotoImg,
   capturedImg,
 }) {
+  const downloadRef = useRef(null);
   const swapImgRef = useRef(null);
   const [output, setOutput] = useState();
   const [isSwapped, setIsSwapped] = useState(false);
@@ -55,7 +59,7 @@ export default function GeneratedImage({
           <div className={styles.imgContainer}>
             <div className={styles.parent}>
               {generatedImg && (
-                <div className={styles.imgParent}>
+                <div className={styles.imgParent} ref={downloadRef}>
                   <img
                     src={output ? output : generatedImg}
                     alt="generated-image"
@@ -79,9 +83,18 @@ export default function GeneratedImage({
                 {/* share option */}
                 <div className={styles.shareOptions}>
                   {/* download */}
-                  <button>download</button>
+                  <div
+                    onClick={() =>
+                      exportAsImage(downloadRef.current, "snapshawt-techkilla")
+                    }
+                    className={styles.download}
+                  >
+                    <img src={download} alt="download" />
+                  </div>
                   {/* share */}
-                  <button>share</button>
+                  <div className={styles.share}>
+                    <img src={share} alt="share" />
+                  </div>
                 </div>
               </div>
             </div>

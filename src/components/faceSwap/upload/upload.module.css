@@ -200,3 +200,58 @@
     }
   }
 }
+
+@media all and (max-width: 480px) {
+  .Upload {
+    /* border: 1px solid black; */
+    gap: 4vw;
+    .creditBtn,
+    .swapNowBtn {
+      font-size: 3vw;
+    }
+    .uploadContainer {
+      /* border: 1px solid black; */
+      flex-direction: column;
+      gap: 7.5vw;
+      .uploadTemplate,
+      .uploadYourPhoto {
+        .title {
+          font-size: 4vw;
+          line-height: 5vw;
+        }
+        .imgContainer {
+          border: 0.4vw solid transparent;
+          width: 42vw;
+          height: 50vw;
+          .uploadBtnContainer {
+            .btnParent {
+              width: 7vw;
+              padding: 1.6vw;
+            }
+            p {
+              font-size: 2.6vw;
+              width: 10vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .webcamContainer {
+    width: 42vw;
+    height: 50vw;
+    border: 0.4vw solid transparent;
+    .captureBtnContainer {
+      gap: 2vw;
+      .btnParent {
+        width: 7vw;
+        padding: 1.6vw;
+      }
+      p {
+        font-size: 2.6vw;
+        width: 10vw;
+      }
+    }
+  }
+}
