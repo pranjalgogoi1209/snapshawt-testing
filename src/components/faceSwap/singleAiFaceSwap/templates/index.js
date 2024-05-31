@@ -174,8 +174,14 @@ export default function Templates({
     // testing => local storage's cards has new updated cards
     const oldCards = JSON.parse(localStorage.getItem("cardsArr"));
     const oldOriginals = JSON.parse(localStorage.getItem("originalImagesArr"));
+    
+    // checking templatesUpdateStatus
+    const status = JSON.parse(localStorage.getItem("templatesUpdateStatus"))
+    const templatesUpdateStatus  = "1";
+    
 
-    let oldCardsHasNewCards = false;
+
+   /*  let oldCardsHasNewCards = false;
     let isSameLength = false;
     if (oldCards) {
       oldCardsHasNewCards = oldCards.some(card => card.src.includes("bikini"));
@@ -188,11 +194,18 @@ export default function Templates({
       console.log(isSameLength);
       oldCards && console.log(oldCards.length);
       mixedCards && console.log(mixedCards.length);
-    }
+    } */
 
-    if (!oldCards || !oldOriginals || !oldCardsHasNewCards || !isSameLength) {
+   
+    const oldCardsHasNewCards = oldCards && oldCards.some(card => card.src.includes("bikini"));
+    const isSameLength = oldCards && oldCards.length === mixedCards.length;
+   
+    
+
+    if (!oldCards || !oldOriginals || !oldCardsHasNewCards || !isSameLength || status !== templatesUpdateStatus) {
       localStorage.setItem("cardsArr", JSON.stringify(cards));
       localStorage.setItem("originalImagesArr", JSON.stringify(originals));
+      localStorage.setItem("templatesUpdateStatus", JSON.stringify(templatesUpdateStatus));
     }
 
     /*  const storedCards = JSON.parse(localStorage.getItem("cardsArr"));
