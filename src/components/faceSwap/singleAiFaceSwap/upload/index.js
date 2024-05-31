@@ -431,6 +431,7 @@ export default function Upload({
                         ref={webRef}
                         id={styles.webcam}
                         forceScreenshotSourceSize={true}
+                        mirrored={true}
                       />
                     )}
                     {capturedImg && (
