@@ -1,0 +1,140 @@
+.Credits {
+  padding: 1vw;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2vw;
+  box-shadow: 0vw 0vw 0.5vw var(--themeColor2);
+  border-radius: 2vw;
+  background-color: #fff;
+  position: relative;
+  background-image: url("./../../../public/credits/creditsBg.png");
+  background-position: center;
+  background-size: cover;
+  .allCredit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+  }
+  .singleCraditContainer {
+    /* border: 1px solid black; */
+    position: relative;
+    width: 26%;
+    box-shadow: 0.1vw 0.1vw 0.5vw rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    padding-bottom: 1vw;
+    background-color: #fff;
+    .heading {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 1vw;
+      color: #fff;
+      height: 8vw;
+      width: 100%;
+      .txt {
+        font-size: 0.8vw;
+        font-weight: 400;
+      }
+      .type {
+        font-size: 2vw;
+        font-weight: 500;
+      }
+    }
+    .descriptionContainer {
+      margin-top: 7vw;
+      display: flex;
+      flex-direction: column;
+      .description {
+        /* border: 1px solid black; */
+        border-bottom: 0.1px solid var(--themeColor2);
+        padding: 0.5vw 0;
+        margin: 0 1vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+        .icon {
+          font-size: 3vw;
+          width: 10%;
+        }
+        .desContent {
+          font-size: 0.8vw;
+          width: 90%;
+        }
+      }
+    }
+    .btn {
+      /* border: 1px solid black; */
+      width: 80%;
+      align-self: center;
+      font-size: 1.2vw;
+      font-weight: 500;
+    }
+    .creditCount {
+      position: absolute;
+      top: 5vw;
+      left: 10%;
+      box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+      padding: 0.5vw 2vw;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      .count {
+        /* border: 1px solid black; */
+        font-size: 4vw;
+        text-align: center;
+      }
+      .txt {
+        /* border: 1px solid black; */
+        font-size: 1.5vw;
+        text-align: center;
+      }
+    }
+    .showPopular {
+      display: flex;
+    }
+    .notShowPopular {
+      display: none;
+    }
+    .popular {
+      /* padding: 1vw; */
+      justify-content: center;
+      align-items: center;
+      width: 6vw;
+      height: 6vw;
+      border-radius: 50%;
+      box-shadow: 0.2vw 0.2vw 0.5vw rgba(0, 0, 0, 0.5);
+      /* border: 1px solid black; */
+      text-align: center;
+      font-size: 1vw;
+      font-weight: 600;
+      position: absolute;
+      top: -7%;
+      right: -7%;
+      color: #fff;
+    }
+  }
+  .buyNow {
+    width: 20%;
+    font-size: 1.5vw;
+    border-radius: 2vw;
+    font-weight: 600;
+  }
+  .close {
+    width: 1.5vw;
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    cursor: pointer;
+  }
+}

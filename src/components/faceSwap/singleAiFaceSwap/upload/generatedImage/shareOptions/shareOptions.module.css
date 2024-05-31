@@ -1,0 +1,32 @@
+.ShareOptions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  .share {
+    gap: 2vw;
+    /* width: 50%; */
+    /* height: 20%; */
+    padding: 2vw 5vw;
+    background-color: #f1f1f1;
+    border-radius: 1vw;
+    box-shadow: 0 0 2vw rgba(255, 255, 255, 0.7);
+    /* border: 0.2vw solid var(--themeColor1); */
+  }
+}
+
+/* mobile responsiveness */
+
+@media all and (max-width: 480px) {
+  .ShareOptions {
+    .share {
+      gap: 4vw;
+      padding: 5vw 8vw;
+      border-radius: 2.5vw;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.Templates {
+  /* border: 1px solid black; */
+  background-image: url("./../../../../../public/faceSwap/singleAiFaceSwap/templates/templatesBg.png");
+  background-size: cover;
+  background-position: center;
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  .title {
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  .templateContainer {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    flex-wrap: wrap;
+    .imgContainer {
+      width: 25vw;
+      cursor: pointer;
+      .img {
+        border-radius: 1.5vw;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .Templates {
+    padding: 6vw;
+    gap: 6vw;
+    .title {
+      font-size: 5vw;
+      line-height: 5vw;
+    }
+    .templateContainer {
+      gap: 6vw;
+      .imgContainer {
+        width: 25vw;
+      }
+    }
+  }
+}

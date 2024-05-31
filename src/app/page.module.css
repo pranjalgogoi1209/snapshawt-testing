@@ -1,0 +1,11 @@
+.HomePage {
+  /* border: 1px solid black; */
+  width: 100%;
+  margin-top: 5.2vw;
+}
+
+@media all and (max-width: 480px) {
+  .HomePage {
+    margin-top: 13.5vw;
+  }
+}

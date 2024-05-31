@@ -1,0 +1,26 @@
+.AboutPage {
+  margin-top: 5.2vw;
+  padding: 2vw 3vw 3vw 3vw;
+  background-image: url("./../../../public/home/hero/bg01.png");
+  background-position: center;
+  background-size: cover;
+  gap: 2vw;
+}
+
+/* tablet responsiveness */
+@media all and (max-width: 991px) {
+  .AboutPage {
+    margin-top: 5.7vw;
+    padding: 6vw;
+    gap: 4vw;
+  }
+}
+
+/* mobile responsiveness */
+@media all and (max-width: 480px) {
+  .AboutPage {
+    margin-top: 13.5vw;
+    padding: 6vw 4vw;
+    gap: 4vw;
+  }
+}

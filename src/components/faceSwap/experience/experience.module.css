@@ -1,0 +1,104 @@
+.EnhanceImage {
+  /* border: 1px solid black; */
+  padding: 4vw;
+  background-image: url("./../../../../public/faceSwap/experience/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  gap: 5vw;
+  .top {
+    justify-content: space-between;
+    .leftContainer {
+      width: 38%;
+      position: relative;
+      margin: auto;
+      .imgContainer {
+        /* border: 1px solid black; */
+        width: 100%;
+        display: flex;
+        place-items: center;
+        border-radius: 1.5vw;
+        .img {
+          border-radius: 1.5vw;
+          border: 0.4vw solid #fff;
+          box-shadow: 0vw 0vw 1vw rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+    .rightContainer {
+      /* border: 1px solid black; */
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      width: 50%;
+      margin-left: 2%;
+      .txt {
+        line-height: 2.5vw;
+      }
+      .btn {
+        margin-top: 1.5vw;
+        margin-right: auto;
+      }
+    }
+  }
+  .imgContainer {
+    width: 100%;
+    .img {
+      border-radius: 1.5vw;
+    }
+  }
+  .bottom {
+    gap: 1vw;
+    .txt {
+      line-height: 2.5vw;
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .EnhanceImage {
+    padding: 6vw 4vw;
+    gap: 10vw;
+    .top {
+      gap: 8vw;
+      flex-direction: column;
+      .leftContainer {
+        width: 100%;
+        .imgContainer {
+          width: 100%;
+          border-radius: 3vw;
+          .img {
+            border-radius: 3vw;
+          }
+        }
+      }
+      .rightContainer {
+        gap: 2.5vw;
+        width: 100%;
+        .txt {
+          line-height: 5vw;
+        }
+        .btn {
+          margin-top: 4vw;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 3vw;
+          border-radius: 3vw;
+        }
+      }
+    }
+
+    .imgContainer {
+      width: 100%;
+      .img {
+        border-radius: 3vw;
+      }
+    }
+
+    .bottom {
+      gap: 2.5vw;
+      .txt {
+        line-height: 5vw;
+      }
+    }
+  }
+}

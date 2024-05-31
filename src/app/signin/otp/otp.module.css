@@ -1,0 +1,147 @@
+.Otp {
+  margin-top: 5.2vw;
+  padding: 2vw 3vw 3vw 3vw;
+  background-image: url("./../../../../public/signinPage/signinBg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  .title {
+    /* border: 1px solid black; */
+    font-size: 1.2vw;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .otpContainer {
+    /* border: 1px solid black; */
+    gap: 1vw;
+    .inputField {
+      outline: none;
+      width: 5vw;
+      height: 5vw;
+      border: 0.2vw solid var(--themeColor1);
+      border-radius: 1vw;
+      text-align: center;
+      font-size: 1.5vw;
+      font-weight: 600;
+      background-color: transparent;
+    }
+    .inputField:focus {
+      border: 0.2vw solid var(--themeColor1);
+      background-color: var(--themeColor2);
+      color: #fff;
+    }
+    /* 
+    .inputContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0.2vw solid #7a21bb;
+      width: 5vw;
+      height: 5vw;
+      border-radius: 1vw;
+    }
+   .input {
+      border: none;
+      outline: none;
+      text-align: center;
+      font-size: 1.5vw;
+      background-color: transparent;
+    }
+    .input::-webkit-inner-spin-button,
+    .input::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    .input {
+      -moz-appearance: textfield;
+    } */
+  }
+  .wrong {
+    color: red;
+    font-weight: 500;
+  }
+  .resendContainer {
+    font-size: 1.2vw;
+    font-weight: 500;
+    .resend {
+      color: #7a21bb;
+      text-decoration: underline;
+      text-decoration-color: #7a21bb;
+      cursor: pointer;
+    }
+    .timer {
+      display: none;
+      color: #7a21bb;
+      text-decoration-color: #7a21bb;
+    }
+  }
+  .btn {
+    width: 12vw;
+    font-size: 1.5vw;
+    padding: 0.5vw 3vw;
+    border-radius: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2vw;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .Otp {
+    margin-top: 13.5vw;
+    padding: 6vw;
+    gap: 5vw;
+    min-height: 60vh;
+    .title {
+      font-size: 3vw;
+    }
+    .otpContainer {
+      gap: 2.5vw;
+      .inputField {
+        width: 12.5vw;
+        height: 12.5vw;
+        border: 0.5vw solid var(--themeColor1);
+        border-radius: 2.5vw;
+        font-size: 3.75vw;
+      }
+      /*  .inputContainer {
+        border: 0.5vw solid #7a21bb;
+        width: 12.5vw;
+        height: 12.5vw;
+        border-radius: 2.5vw;
+      }
+      .input {
+        border: none;
+        outline: none;
+        font-size: 3.75vw;
+        text-align: center;
+      } */
+    }
+    .wrong {
+    }
+    .resendContainer {
+      font-size: 3vw;
+      .resend {
+      }
+      .timer {
+      }
+    }
+    .btn {
+      width: 30vw;
+      font-size: 4.75vw;
+      padding: 1.25vw 7.5vw;
+      border-radius: 5vw;
+      gap: 5vw;
+    }
+  }
+}

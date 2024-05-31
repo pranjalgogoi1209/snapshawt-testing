@@ -6,10 +6,88 @@
   gap: 2vw;
 
   .navLink {
-    font-size: 1.2vw;
+    /* font-size: 1.2vw; */
+    font-size: 1.3vw;
     font-weight: 600;
+    cursor: pointer;
   }
+  .products {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    .productsHoverContainer {
+      /* border: 1px solid black; */
+      width: 17vw;
+      position: absolute;
+      top: 7vw;
+      right: -5.7vw;
+      z-index: 2000;
+      padding: 2vw;
+      background-color: #fff;
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 1vw;
+      font-size: 1vw;
+      .parent {
+        gap: 0.6vw;
+        align-items: flex-start;
+      }
+      .list {
+        font-size: 1.2vw;
+        .dropDownIcon {
+          font-size: 2vw;
+
+          margin-right: auto;
+        }
+      }
+      .dropDownContainer {
+        padding-left: 0.5vw;
+        /* font-size: 0.9vw; */
+        font-weight: 600;
+        gap: 0.5vw;
+        align-items: flex-start;
+      }
+    }
+  }
+  .products:hover {
+    height: 8vw;
+  }
+
   .signIn {
     /* border: 1px solid black; */
+    /* padding: 0.6vw 1vw; */
+    padding: 0.5vw 1vw;
+    /* font-size: 1.1vw; */
+    font-size: 1.3vw;
+    width: 8vw;
+    text-align: center;
   }
+  .profile {
+    border: 0.3vw solid var(--themeColor2);
+    border-radius: 50%;
+    display: flex;
+    place-items: center;
+    width: 3.5vw;
+    cursor: pointer;
+    box-shadow: 0 0.2vw 0.5vw var(--themeColor1);
+  }
+  .userProfileImg {
+    border-radius: 50%;
+  }
+}
+
+.products:hover .productsHoverContainer {
+  display: flex;
+}
+.productsHoverContainer:hover {
+  display: flex;
+}
+.list:hover {
+  color: var(--themeColor1);
+}
+.span:hover {
+  color: var(--themeColor1);
 }

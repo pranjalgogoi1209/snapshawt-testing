@@ -1,0 +1,23 @@
+.Explore {
+  width: 100%;
+  padding: 4vw;
+  background-image: url("./../../../../public/faceSwap/explore/exploreBg.jpg");
+  background-size: cover;
+  background-position: center;
+  gap: 1vw;
+  color: #fff;
+  .heading {
+    text-align: center;
+  }
+  .des {
+    text-align: center;
+    font-weight: 500;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .Explore {
+    padding: 14vw 4vw;
+    gap: 5vw;
+  }
+}

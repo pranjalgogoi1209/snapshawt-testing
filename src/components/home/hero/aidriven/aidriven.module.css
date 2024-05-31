@@ -1,0 +1,111 @@
+.AiDriven {
+  /* border: 1px solid black; */
+  display: flex;
+  padding: 2vw 4vw;
+  justify-content: space-between;
+  .leftContainer {
+    margin-left: 2%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 42%;
+    .btn {
+      margin: 1vw auto;
+      font-size: 1.7vw;
+      border-radius: 1.7vw;
+    }
+  }
+  /* .rightContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    .first,
+    .second {
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      .imgContainer {
+        background: linear-gradient(white, white) padding-box,
+          linear-gradient(to right, #ff93df, #7a21bb) border-box;
+        border: 0.2vw solid transparent;
+        width: 14vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2vw;
+        .img {
+          border-radius: 2vw;
+        }
+      }
+      .iconContainer {
+        width: 5vw;
+      }
+      .avengerContainer {
+        width: 18vw;
+        border-radius: 2vw;
+        background: linear-gradient(white, white) padding-box,
+          linear-gradient(to right, #ff93df, #7a21bb) border-box;
+        border: 0.2vw solid transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .img {
+          border-radius: 2vw;
+        }
+      }
+    }
+  } */
+
+  .rightContainer {
+    width: 38%;
+    margin-right: 5vw;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .AiDriven {
+    flex-direction: column-reverse;
+    gap: 8vw;
+    padding: 4vw;
+    padding-bottom: 10vw;
+    justify-content: space-between;
+    .leftContainer {
+      margin-left: 0%;
+      gap: 2.5vw;
+      width: 100%;
+      .btn {
+        margin-top: 4vw;
+      }
+    }
+    .rightContainer {
+      width: 100%;
+      gap: 2vw;
+      .first,
+      .second {
+        gap: 2vw;
+        .imgContainer {
+          border: 0.4vw solid transparent;
+          width: 28vw;
+          border-radius: 4vw;
+          .img {
+            border-radius: 4vw;
+          }
+        }
+        .iconContainer {
+          width: 10vw;
+        }
+        .avengerContainer {
+          width: 36vw;
+          border-radius: 4vw;
+          border: 0.4vw solid transparent;
+          .img {
+            border-radius: 4vw;
+          }
+        }
+      }
+    }
+  }
+}

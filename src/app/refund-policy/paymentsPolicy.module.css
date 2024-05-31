@@ -1,0 +1,17 @@
+.PaymentsPolicy {
+  margin-top: 5.2vw;
+  padding: 2vw 3vw 3vw 3vw;
+  background-image: url("./../../../public/home/hero/bg01.png");
+  background-position: center;
+  background-size: cover;
+  gap: 3vw;
+  align-items: flex-start;
+}
+
+@media all and (max-width: 480px) {
+  .PaymentsPolicy {
+    margin-top: 13.5vw;
+    padding: 6vw 4vw;
+    gap: 6vw;
+  }
+}

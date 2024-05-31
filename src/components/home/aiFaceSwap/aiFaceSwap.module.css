@@ -1,0 +1,176 @@
+.AiFaceSwap {
+  width: 100vw;
+  /* border: 1px solid black; */
+  display: flex;
+  /* height: 45vw; */
+  padding: 4vw;
+  padding-bottom: 5vw;
+  background-image: url("./../../../../public/home/aifaceswap/aiFaceSwapBg.png");
+  background-position: center;
+  background-size: cover;
+  gap: 4vw;
+  /* .heading {
+    font-size: 2.8vw;
+    font-weight: 600;
+  } */
+
+  .leftHeadContainer {
+    gap: 10vw;
+  }
+  .leftContainer {
+    width: 50%;
+    margin-left: 5%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .mainContainer {
+      /* border: 1px solid red; */
+      position: relative;
+      width: 65%;
+      z-index: 1;
+      .imgContainer {
+        width: 100%;
+        display: flex;
+        place-items: center;
+        .img {
+          border-radius: 1vw;
+        }
+      }
+      .dotsImgContainer {
+        width: 60%;
+        /* border: 1px solid black; */
+        position: absolute;
+        top: -27%;
+        right: -35%;
+      }
+      .oneClickMagic {
+        /* border: 1px solid black; */
+        position: absolute;
+        bottom: 17%;
+        right: -10%;
+        transform: rotate(270deg);
+        background-color: #fff;
+        padding: 1vw;
+        color: #7a21bb;
+        font-weight: 700;
+        font-size: 1vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .linesImgContainer {
+        position: absolute;
+        width: 150%;
+        left: -25%;
+        bottom: -18%;
+        z-index: -1;
+        /* border: 1px solid black; */
+      }
+      .roundIcon {
+        /* border: 1px solid #fff; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 35%;
+        top: 7%;
+        left: -17%;
+        .img {
+          animation: rotate 5s linear infinite;
+        }
+      }
+    }
+  }
+  .rightContainer {
+    width: 58%;
+    margin-right: 8%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    position: relative;
+    .txtStrong {
+      font-weight: 600;
+      /* border: 1px solid black; */
+    }
+    .btn {
+      margin-right: auto;
+      margin-top: 1vw;
+    }
+    .rightIcon {
+      position: absolute;
+      width: 16%;
+      top: 26%;
+      right: -20%;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media all and (max-width: 480px) {
+  .AiFaceSwap {
+    /* height: 45vw; */
+    gap: 10vw;
+    padding: 6vw 4vw;
+    flex-direction: column;
+    .heading {
+      text-align: center;
+    }
+    .leftHeadContainer {
+      gap: 10vw;
+      /* border: 1px solid #000; */
+      flex-direction: column;
+    }
+    .leftContainer {
+      width: 100%;
+      margin: 0 auto;
+      .mainContainer {
+        width: 70%;
+        .imgContainer {
+          .img {
+            border-radius: 2vw;
+          }
+        }
+        .dotsImgContainer {
+        }
+        .oneClickMagic {
+          position: absolute;
+          bottom: 17%;
+          right: -7%;
+          padding: 2.5vw;
+          font-size: 2.5vw;
+        }
+        .linesImgContainer {
+        }
+        .roundIcon {
+          width: 44%;
+          top: 7%;
+          left: -22%;
+        }
+      }
+    }
+    .rightContainer {
+      /* border: 1px solid #000; */
+      width: 100%;
+      gap: 2.5vw;
+      margin-right: 0;
+      .btn {
+        margin-top: 4vw;
+      }
+      .rightIcon {
+        width: 32%;
+        top: 0%;
+        right: 0%;
+      }
+    }
+  }
+}

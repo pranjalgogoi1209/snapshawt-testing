@@ -1,0 +1,7 @@
+/** @format */
+
+.page {
+  display: flex;
+  padding: 8vw 10vw;
+  gap: 10rem;
+}

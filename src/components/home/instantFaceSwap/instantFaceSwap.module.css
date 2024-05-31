@@ -1,0 +1,98 @@
+.InstantFaceSwap {
+  width: 100%;
+  /* border: 1px solid black; */
+  padding: 3vw 4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("./../../../../public/home/instantFaseSwap/instantFaceSwapBg.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  .leftContainer {
+    /* border: 1px solid black; */
+    width: 50%;
+    margin-left: 2%;
+    .title {
+      font-size: 3.5vw;
+      color: #fff;
+    }
+  }
+  .rightContainer {
+    /* border: 1px solid black; */
+    width: 50%;
+    .imgContainer01 {
+      width: 20vw;
+      display: flex;
+      place-items: center;
+      position: absolute;
+      bottom: 0;
+      right: 35%;
+    }
+    .imgContainer02 {
+      width: 20vw;
+      display: flex;
+      place-items: center;
+      position: absolute;
+      bottom: 0;
+      right: 20%;
+    }
+    .imgContainer03 {
+      width: 25vw;
+      display: flex;
+      place-items: center;
+      position: absolute;
+      bottom: 0;
+      right: 5%;
+    }
+  }
+  .rightContainerMobile {
+    display: none;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .InstantFaceSwap {
+    position: relative;
+    .leftContainer {
+      margin-left: 0;
+      padding: 4vw;
+      padding-left: 2vw;
+      width: 50%;
+      .title {
+        font-size: 7vw;
+      }
+    }
+    .rightContainer {
+      display: none;
+    }
+    .rightContainerMobile {
+      width: 50%;
+      display: flex;
+      .imgContainer01,
+      .imgContainer02,
+      .imgContainer03 {
+        position: absolute;
+        bottom: -2%;
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+      }
+
+      .imgContainer01 {
+        width: 58vw;
+        right: 1%;
+      }
+      .imgContainer03 {
+        width: 75vw;
+        right: -8%;
+      }
+      .imgContainer02 {
+        width: 55vw;
+        right: -3%;
+      }
+      .show {
+        opacity: 1;
+      }
+    }
+  }
+}

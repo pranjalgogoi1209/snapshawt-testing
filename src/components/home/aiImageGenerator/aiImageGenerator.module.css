@@ -1,0 +1,207 @@
+.AiImageGenerator {
+  width: 100vw;
+  /* border: 1px solid black; */
+  display: flex;
+  /* height: 45vw; */
+  gap: 10vw;
+  padding: 4vw;
+  padding-top: 6vw;
+  padding-bottom: 8vw;
+  background-image: url("./../../../../public/home/aifaceswap/aiFaceSwapBg.png");
+  background-position: center;
+  background-size: cover;
+  .leftContainer {
+    width: 45%;
+    margin-left: 5%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .mainContainer {
+      /* border: 1px solid red; */
+      position: relative;
+      width: 72%;
+      z-index: 1;
+      .imgContainer {
+        width: 100%;
+        display: flex;
+        place-items: center;
+        border-radius: 1vw;
+        overflow: hidden;
+        .img {
+          border-radius: 1vw;
+        }
+      }
+      .search {
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        width: 90%;
+        box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        padding: 0.7vw 1vw;
+        border-radius: 1vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .prompt {
+          font-size: 1vw;
+          font-weight: 500;
+          color: #7a21bb;
+        }
+        .svg {
+          font-size: 1.5vw;
+        }
+      }
+      .dotsImgContainer {
+        width: 55%;
+        /* border: 1px solid black; */
+        position: absolute;
+        top: -25%;
+        right: -35%;
+        z-index: -1;
+      }
+      .linesImgContainer {
+        position: absolute;
+        width: 150%;
+        left: -25%;
+        bottom: -20%;
+        z-index: -1;
+        /* border: 1px solid black; */
+      }
+      .roundIcon {
+        /* border: 1px solid #fff; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 35%;
+        top: 7%;
+        left: -17%;
+        .img {
+          animation: rotate 5s linear infinite;
+        }
+      }
+      .animatedIcon01 {
+        width: 25%;
+        /* border: 1px solid black; */
+        position: absolute;
+        top: -10%;
+        right: -15%;
+        z-index: -1;
+        transition: all ease 0.5s;
+      }
+      .animatedIcon02 {
+        width: 35%;
+        /* border: 1px solid black; */
+        position: absolute;
+        top: 40%;
+        left: -17%;
+        transition: all ease 0.5s;
+      }
+      .animatedIcon03 {
+        width: 15%;
+        /* border: 1px solid black; */
+        position: absolute;
+        bottom: 5%;
+        left: -10%;
+        transition: all ease 0.5s;
+      }
+
+      &:hover .animatedIcon01 {
+        transform: translate(2vw, -2vw);
+      }
+
+      &:hover .animatedIcon02 {
+        transform: translate(-4vw, -4vw);
+      }
+      &:hover .animatedIcon03 {
+        transform: translate(-3vw, -3vw);
+      }
+    }
+  }
+  .rightContainer {
+    width: 58%;
+    margin-right: 8%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    position: relative;
+    .txtStrong {
+      font-weight: 600;
+      /* border: 1px solid black; */
+    }
+    .btn {
+      margin-right: auto;
+      margin-top: 1vw;
+    }
+    .rightIcon {
+      position: absolute;
+      width: 16%;
+      top: 26%;
+      right: -20%;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.blur {
+  filter: blur(9px);
+}
+
+@media all and (max-width: 480px) {
+  .AiImageGenerator {
+    flex-direction: column;
+    padding: 14vw 4vw;
+    .leftContainer {
+      margin: 0 auto;
+      width: 100%;
+      .mainContainer {
+        width: 68%;
+        .imgContainer {
+          border-radius: 2vw;
+          .img {
+            border-radius: 2vw;
+          }
+        }
+        .search {
+          padding: 2.1vw 3vw;
+          border-radius: 3vw;
+          .prompt {
+            font-size: 2.8vw;
+          }
+          .svg {
+            font-size: 5vw;
+          }
+        }
+        .dotsImgContainer {
+          right: -30%;
+        }
+        .linesImgContainer {
+        }
+      }
+    }
+    .rightContainer {
+      width: 100%;
+      gap: 2vw;
+      .btn {
+        margin: 0 auto;
+        margin-top: 4vw;
+      }
+      .rightIcon {
+        width: 32%;
+        top: 0%;
+        right: 0%;
+      }
+    }
+  }
+}

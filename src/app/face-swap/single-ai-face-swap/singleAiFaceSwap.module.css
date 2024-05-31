@@ -1,0 +1,10 @@
+.SingleAiFaceSwap {
+  /* border: 1px solid black; */
+  margin-top: 5.2vw;
+}
+
+@media all and (max-width: 480px) {
+  .SingleAiFaceSwap {
+    margin-top: 13.5vw;
+  }
+}

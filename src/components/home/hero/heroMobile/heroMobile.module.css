@@ -1,0 +1,90 @@
+.HeroMobile {
+  /* border: 1px solid black; */
+  padding: 2vw 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  .top {
+    gap: 1vw;
+    .description {
+      width: 95vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* border: 1px solid #000; */
+    }
+  }
+  .cardsMobile {
+    .changeCard {
+      .swiper {
+        width: 80vw;
+        /* border: 1px solid red; */
+        .swiperSlide {
+          /* border: 2px solid green; */
+        }
+      }
+    }
+  }
+}
+
+/* mobile responsiveness */
+@media all and (max-width: 480px) {
+  .top {
+    gap: 0vw;
+    .description {
+      /* border: 1px solid #000; */
+      height: 15vw;
+    }
+  }
+
+  .cardsMobile {
+    /* border: 1px solid #000; */
+    margin-top: 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6vw;
+    .title {
+      gap: 6vw;
+    }
+    .text {
+      /* border: 1px solid #000; */
+      width: 25vw;
+      height: 10vw;
+      font-size: 4vw;
+      font-weight: 600;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .textUnique {
+      width: 21vw;
+    }
+    .titleUnderline {
+      position: relative;
+    }
+    .titleUnderline::after {
+      content: "";
+      height: 0.8vw;
+      background-color: var(--themeColor1);
+      position: absolute;
+      bottom: -0.9vw;
+      left: 0;
+      border-radius: 1vw;
+      animation: underline 0.5s ease-in-out forwards;
+    }
+  }
+
+  @keyframes underline {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}

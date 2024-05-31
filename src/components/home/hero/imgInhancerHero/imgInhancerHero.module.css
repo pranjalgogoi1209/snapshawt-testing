@@ -1,0 +1,212 @@
+.faceSwap {
+  /* border: 1px solid black; */
+  position: relative;
+  width: 24vw;
+  height: 30vw;
+  .imgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .img {
+      border-radius: 2vw;
+    }
+  }
+  .faceSwapContent {
+    border-radius: 2vw;
+    background: linear-gradient(
+      to bottom,
+      rgba(122, 33, 187, 0.8),
+      #ff93df80,
+      transparent,
+      transparent,
+      transparent
+    );
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .top {
+      /* border: 1px solid #fff; */
+      display: flex;
+      flex-direction: column;
+      gap: 0.5vw;
+      .titleContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .title {
+          width: 40%;
+          /* border: 1px solid white; */
+          font-size: 1.5vw;
+          font-weight: 700;
+          color: #fff;
+        }
+        /* .free {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 1.1vw;
+        } */
+        .free {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /* width: 2.5vw; */
+          background-color: #eedb47;
+          padding: 0.2vw 1vw;
+          border-radius: 0.5vw;
+          animation-name: free;
+          animation-duration: 1s;
+          animation-play-state: running;
+          /* animation-fill-mode: forwards; */
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+          .freeTxt {
+            color: var(--themeColor1);
+            font-weight: 600;
+            font-size: 1.1vw;
+            font-style: italic;
+          }
+        }
+      }
+      .description {
+        color: #fff;
+        font-size: 0.9vw;
+        text-align: left;
+      }
+    }
+    .bottom {
+      /* border: 1px solid #fff; */
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      .swapImg {
+        display: flex;
+        align-items: center;
+        gap: 0.7vw;
+        .active {
+          border: 0.17vw solid #ffe101;
+          width: 3vw !important;
+          height: 3vw !important;
+        }
+        .imgContainer {
+          width: 2.5vw;
+          height: 2.5vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 0.5vw;
+          cursor: pointer;
+          .img {
+            border-radius: 0.5vw;
+          }
+        }
+      }
+      .link {
+        /* border: 1px solid #fff; */
+        .btn {
+          width: 100%;
+          font-weight: 600;
+          padding: 0.7vw 1vw;
+          font-size: 1.2vw;
+          border-radius: 1vw;
+        }
+        /* .btn:hover {
+            color: red;
+          } */
+      }
+    }
+  }
+}
+@keyframes free {
+  0% {
+    box-shadow: 0vw 0vw 0vw #eedb47;
+  }
+  100% {
+    box-shadow: 0vw 0vw 2vw #eedb47;
+  }
+}
+
+/* mobile responsive */
+@media all and (max-width: 480px) {
+  .faceSwap {
+    width: 80vw;
+    height: 98vw;
+    .imgContainer {
+      .img {
+        border-radius: 6vw;
+      }
+    }
+    .faceSwapContent {
+      border-radius: 6vw;
+      padding: 3vw;
+      .top {
+        gap: 1.5vw;
+        .titleContainer {
+          .title {
+            font-size: 6.5vw;
+          }
+          /* .free {
+            width: 7.5vw;
+          } */
+          .free {
+            margin-top: 2vw;
+            padding: 1vw 3vw;
+            border-radius: 1.25vw;
+            .freeTxt {
+              font-size: 3.75vw;
+            }
+          }
+        }
+        .description {
+          font-size: 3.25vw;
+        }
+      }
+      .bottom {
+        gap: 3vw;
+        .swapImg {
+          gap: 4.2vw;
+          .imgContainer {
+            width: 9.5vw;
+            height: 9.5vw;
+            border-radius: 1.5vw;
+            .img {
+              border-radius: 1.5vw;
+            }
+          }
+          .active {
+            border: 0.51vw solid #ffe101;
+            width: 10.5vw !important;
+            height: 10.5vw !important;
+          }
+        }
+        .link {
+          .btn {
+            padding: 2.1vw 3vw;
+            font-size: 4.6vw;
+            border-radius: 3vw;
+          }
+        }
+      }
+    }
+  }
+  @keyframes free {
+    0% {
+      box-shadow: 0vw 0vw 0vw #eedb47;
+    }
+    100% {
+      box-shadow: 0vw 0vw 5vw #eedb47;
+    }
+  }
+}

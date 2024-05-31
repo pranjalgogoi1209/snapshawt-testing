@@ -1,64 +1,114 @@
 .Header {
   /* border: 1px solid red; */
-  background-color: #fff;
-  padding: 1vw 3vw;
+  padding: 0vw 3vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 1000;
+  width: 100vw;
+  height: 5.2vw;
+  background-color: #fff;
   .logoContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 18vw;
+    width: 15vw;
   }
   .rightContainer {
+    /* border: 1px solid black; */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 2vw;
-    /* border: 1px solid black; */
-    .creditBtn {
-      font-size: 1.2vw;
+    .price,
+    .credit {
+      font-size: 1.1vw;
       font-weight: 600;
+      border-radius: 0.5vw;
+      padding: 0.6vw 1vw;
     }
-  }
-  .bar {
-    display: none;
-    cursor: pointer;
-    svg {
-      color: #7a21bb;
+    .price {
+      /* padding: 0.75vw 1vw; */
+      padding: 0.5vw 1vw;
+      width: 8vw;
+      font-size: 1.3vw;
+    }
+    .newCredit {
+      /* font-size: 1.2vw; */
+      font-size: 1.3vw;
+      font-weight: 600;
+      color: var(--themeColor1);
+    }
+    .profile {
+      position: fixed;
+      top: 5.6vw;
+      right: 1vw;
+      z-index: 1001;
+    }
+    .credits {
+      position: absolute;
+      top: 7vw;
+      left: 9.3%;
+      z-index: 1002;
+    }
+    .mobileNavbar {
+      display: none;
+    }
+    .bar {
+      display: none;
     }
   }
 }
 
 @media all and (max-width: 480px) {
   .Header {
-    /* border: 1px solid black; */
-    padding: 2vw 6vw;
+    /* border: 1px solid red; */
+    padding: 3vw 3vw;
+    height: 13vw;
     .logoContainer {
       width: 36vw;
     }
     .rightContainer {
-      gap: 4vw;
-      /* border: 1px solid black; */
-      .creditBtn {
+      gap: 3vw;
+      .price,
+      .credit {
         font-size: 2.4vw;
-        font-weight: 600;
+        border-radius: 1vw;
+        padding: 1.2vw 2vw;
+        width: 16vw;
       }
-    }
-    .desktopNavbar {
-      display: none;
-    }
-    .bar {
-      display: flex;
-      svg {
-        font-size: 6vw;
+      .price {
+        padding: 1vw 2vw;
+        font-size: 3.6vw;
+      }
+      .newCredit {
+        font-size: 3.6vw;
+      }
+      .desktopNavbar {
+        display: none;
+      }
+      .mobileNavbar {
+        display: flex;
+      }
+      .bar {
+        display: flex;
+        /* font-size: 5vw */
+        width: 8vw;
+        color: var(--themeColor1);
+      }
+      .profile {
+        position: fixed;
+        top: 15vw;
+        right: 10vw;
+        z-index: 1001;
+      }
+      .credits {
+        position: absolute;
+        top: 7vw;
+        left: 9.3%;
+        z-index: 1002;
       }
     }
   }

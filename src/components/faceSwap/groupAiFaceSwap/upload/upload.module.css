@@ -1,0 +1,292 @@
+/* .disableScroll {
+  height: 100vh;
+  overflow: hidden;
+} */
+.imgBoundary {
+  width: 35vw;
+  height: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.Upload {
+  padding: 2vw;
+  background-image: url("./../../../../../public/faceSwap/singleAiFaceSwap/upload/uploadBg.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  .swapBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    .btn {
+      width: 26vw;
+      font-size: 1.5vw;
+      font-weight: 600;
+      cursor: pointer;
+      background-color: transparent;
+      padding: 1vw 2vw;
+      border-radius: 5vw;
+      color: var(--themeColor1);
+      border: 0.2vw solid #7a21bb;
+    }
+    .fillSwapBtn {
+      background: linear-gradient(to right, #ff93df, #7a21bb);
+      color: #fff;
+    }
+  }
+
+  .swapNowBtn {
+    font-size: 1.5vw;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .uploadContainer {
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 5vw;
+    .uploadTemplate,
+    .uploadYourPhoto {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2vw;
+      .title {
+        font-weight: 700;
+        text-align: center;
+        font-size: 2vw;
+        line-height: 2.5vw;
+      }
+
+      .imgContainer {
+        /* width: 21vw; */
+        /* width: 100%; */
+        max-width: 100%;
+        height: 100%;
+        position: relative;
+        background: linear-gradient(white, white) padding-box,
+          linear-gradient(to right, #ff93df, #7a21bb) border-box;
+        border: 0.2vw solid transparent;
+        border-radius: 1.7vw;
+        .imgParent {
+          width: 100%;
+          height: 100%;
+          border-radius: 1.5vw;
+          .img {
+            border-radius: 1.5vw;
+          }
+        }
+
+        .uploadBtnContainer {
+          border-radius: 1.5vw;
+          /* border: 1px solid black; */
+          background: linear-gradient(
+            to top,
+            rgba(122, 33, 187, 0.8),
+            #ff93df80,
+            transparent,
+            transparent,
+            transparent
+          );
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          gap: 1vw;
+          justify-content: center;
+          align-items: flex-end;
+          padding: 0.5vw;
+          .btnGrandParent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid black; */
+          }
+          .btnParent {
+            /* border: 1px solid black; */
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 0.8vw;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5vw;
+            justify-content: center;
+            align-items: center;
+            width: 3.5vw;
+            cursor: pointer;
+          }
+          .p {
+            font-weight: 400;
+            color: #fff;
+            font-size: 1.3vw;
+            width: 5vw;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.baap {
+  position: relative;
+}
+.webcamContainer {
+  position: relative;
+  max-width: 100%;
+  height: 100%;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, #ff93df, #7a21bb) border-box;
+  border: 0.2vw solid transparent;
+  border-radius: 1.7vw;
+  .webcamParent {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    #webcam {
+      width: 100%;
+      height: 100%;
+      border-radius: 1.7vw;
+      /* margin: 0 auto; */
+      object-fit: cover;
+    }
+    .capturedImage {
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 1.7vw;
+      /* height: 99%; */
+    }
+  }
+  .captureBtnContainer {
+    border-radius: 1.5vw;
+    /* border: 10px solid black; */
+    background: linear-gradient(
+      to top,
+      rgba(122, 33, 187, 0.8),
+      #ff93df80,
+      transparent,
+      transparent,
+      transparent
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 1vw;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0.5vw;
+    .btnGrandParent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* border: 1px solid black; */
+    }
+    .btnParent {
+      /* border: 1px solid black; */
+      background-color: #fff;
+      border-radius: 50%;
+      padding: 0.8vw;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5vw;
+      justify-content: center;
+      align-items: center;
+      width: 3.5vw;
+      cursor: pointer;
+      /* img {
+      } */
+    }
+    .p {
+      font-weight: 400;
+      color: #fff;
+      font-size: 1.3vw;
+      width: 5vw;
+      text-align: center;
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .Upload {
+    /* border: 1px solid black; */
+    margin-top: 14vw;
+    padding: 6vw;
+    gap: 4vw;
+    .creditBtn,
+    .swapNowBtn {
+      font-size: 3vw;
+    }
+    .swapNowBtn {
+      font-size: 5vw;
+    }
+    .uploadContainer {
+      /* border: 1px solid black; */
+      flex-direction: column;
+      gap: 7.5vw;
+      .uploadTemplate,
+      .uploadYourPhoto {
+        gap: 2vw;
+        .title {
+          font-size: 5vw;
+          line-height: 6vw;
+        }
+        .imgContainer {
+          border: 0.4vw solid transparent;
+          width: 45vw;
+          height: 53vw;
+          .uploadBtnContainer {
+            gap: 3vw;
+            .btnParent {
+              width: 8vw;
+              padding: 1.6vw;
+            }
+            .p {
+              font-size: 3.6vw;
+              width: 15vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .webcamContainer {
+    width: 45vw;
+    height: 53vw;
+    border: 0.4vw solid transparent;
+    .captureBtnContainer {
+      gap: 3vw;
+      .btnParent {
+        width: 8vw;
+        padding: 1.6vw;
+      }
+      .p {
+        font-size: 3.6vw;
+        width: 15vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.PrivacyPolicy {
+  margin-top: 5.2vw;
+  padding: 2vw 3vw 3vw 3vw;
+  background-image: url("./../../../public/home/hero/bg01.png");
+  background-position: center;
+  background-size: cover;
+  gap: 4vw;
+  .header {
+    gap: 2vw;
+    .des {
+    }
+  }
+
+  .main {
+    gap: 3vw;
+    .dl {
+      align-items: flex-start;
+      gap: 1.5vw;
+      .dt {
+      }
+      .dd {
+        align-items: flex-start;
+        gap: 1vw;
+        .subHeading {
+          .head {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .PrivacyPolicy {
+    margin-top: 13.5vw;
+    padding: 6vw 4vw;
+    gap: 8vw;
+    .header {
+      gap: 4vw;
+    }
+
+    .main {
+      gap: 6vw;
+      .dl {
+        gap: 3vw;
+        .dt {
+        }
+
+        .dd {
+          gap: 2.5vw;
+          .subHeading {
+            .head {
+            }
+          }
+        }
+      }
+    }
+  }
+}

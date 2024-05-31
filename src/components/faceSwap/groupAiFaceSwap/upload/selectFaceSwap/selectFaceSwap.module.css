@@ -1,0 +1,71 @@
+.SelectFaceSwap {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1vw;
+  .title {
+    font-weight: 700;
+    text-align: center;
+    font-size: 2vw;
+    line-height: 2.5vw;
+  }
+  .addFaceContainer {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1vw;
+    height: 18vw;
+    padding: 1vw;
+    overflow-y: scroll;
+    /*   scrollbar-width: thin;
+    scrollbar-color: darkgray lightgray; */
+  }
+  .addFace {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    .templateFace {
+      /* border: 1px solid black; */
+      width: 5vw;
+      display: flex;
+      place-items: center;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+    .arrow {
+      /* border: 1px solid black; */
+      width: 5vw;
+      display: flex;
+      place-items: center;
+    }
+    .photoFace {
+      /* border: 1px solid black; */
+      width: 5vw;
+      display: flex;
+      place-items: center;
+      background-color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+}
+
+.addFaceContainer::-webkit-scrollbar {
+  width: 0.8vw;
+}
+
+.addFaceContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.addFaceContainer::-webkit-scrollbar-thumb {
+  /* background-color: var(--themeColor2); */
+  background: linear-gradient(to bottom, #ff93df, #7a21bb);
+  border-radius: 2vw;
+}

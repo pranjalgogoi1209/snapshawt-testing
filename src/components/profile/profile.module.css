@@ -1,0 +1,276 @@
+.Profile {
+  /* border: 1px solid black; */
+  width: 30vw;
+  /* background-image: url("./../../../public/profile/profileBg.png");
+  background-position: center;
+  background-size: cover; */
+  background-color: #f1f1f1;
+  box-shadow: 0.2vw 0.2vw 0.5vw var(--themeColor2);
+  border-radius: 2vw;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  .user {
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+    align-items: center;
+    gap: 2vw;
+    /* border: 1px solid black; */
+    .userProfile {
+      border: 0.3vw solid var(--themeColor2);
+      border-radius: 50%;
+      display: flex;
+      place-items: center;
+      width: 4.5vw;
+      cursor: pointer;
+      box-shadow: 0 0.4vw 0.6vw var(--themeColor1);
+    }
+    .userProfileImg {
+      border-radius: 50%;
+    }
+    .rightContainer {
+      /* border: 1px solid black; */
+      display: flex;
+      flex-direction: column;
+      gap: 2vw;
+      width: 15vw;
+      .contact {
+        font-weight: 500;
+        font-size: 1.3vw;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vw;
+        .phoneEmail {
+          word-wrap: break-word;
+        }
+        .bigEmail {
+          font-size: 1vw;
+        }
+      }
+      .btn {
+        font-size: 1.2vw;
+        width: 100%;
+      }
+    }
+  }
+  .gallery {
+    border-top: 0.2vw solid var(--themeColor2);
+    padding-top: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .txt {
+        font-size: 1.2vw;
+        font-weight: 500;
+      }
+      .select {
+        /* border: 1px solid black; */
+        font-weight: 500;
+        display: flex;
+        place-items: center;
+        gap: 0.5vw;
+        .input {
+          cursor: pointer;
+          width: 1.2vw;
+          height: 1.2vw;
+        }
+        .label {
+          font-size: 1.2vw;
+        }
+      }
+      .download {
+        /* border: 1px solid black; */
+        place-items: center;
+        gap: 1vw;
+        font-weight: 500;
+        cursor: pointer;
+        .cancel {
+          color: red;
+          font-size: 1.4vw;
+          margin-top: 0.3vw;
+        }
+        .selectAll {
+          color: green;
+          font-size: 1.2vw;
+          text-decoration: underline;
+        }
+        .downloadBtn {
+          margin-top: 0.3vw;
+          color: blue;
+          font-size: 1.2vw;
+        }
+      }
+    }
+    .bottom {
+      /* border: 1px solid black; */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1vw;
+      flex-wrap: wrap;
+      height: 18vw;
+      overflow-y: scroll;
+      .imgContainer {
+        width: auto !important;
+        height: 6vw;
+        .a {
+          width: auto !important;
+          height: 100%;
+          position: relative;
+          .img {
+            border-radius: 0.5vw;
+            width: auto !important;
+            height: 100%;
+          }
+          .selectImg {
+            position: absolute;
+            bottom: 40%;
+            left: 5%;
+            width: 30%;
+            height: 100%;
+            border: 1px solid white;
+            cursor: pointer;
+            background-color: var(--themeColor1) !important;
+          }
+        }
+      }
+    }
+    .seeAll {
+      font-size: 1.2vw;
+      font-weight: 500;
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+  .logout {
+    border-top: 0.2vw solid var(--themeColor2);
+    padding-top: 0.5vw;
+    font-size: 1.2vw;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .close {
+    position: absolute;
+    top: 4%;
+    right: 5%;
+    width: 1.5vw;
+    cursor: pointer;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .Profile {
+    width: 80vw;
+    box-shadow: 0.5vw 0.5vw 1.25vw var(--themeColor2);
+    border-radius: 5vw;
+    padding: 6vw;
+    gap: 5vw;
+    .user {
+      align-items: center;
+      gap: 5vw;
+      .userProfile {
+        border: 0.75vw solid var(--themeColor2);
+        width: 15.25vw;
+        box-shadow: 0 1vw 1.5vw var(--themeColor1);
+      }
+      .rightContainer {
+        /* border: 1px solid black; */
+        gap: 5vw;
+        width: 37.5vw;
+        .contact {
+          font-size: 3.25vw;
+          gap: 1.25vw;
+          .bigEmail {
+            font-size: 2.5vw;
+          }
+        }
+        .btn {
+          font-size: 3vw;
+        }
+      }
+    }
+    .gallery {
+      border-top: 0.5vw solid var(--themeColor2);
+      padding-top: 1.25vw;
+      gap: 2.5vw;
+      .top {
+        .txt {
+          font-size: 3vw;
+        }
+        .select {
+          gap: 1.25vw;
+          .input {
+            width: 3vw;
+            height: 3vw;
+          }
+          .label {
+            font-size: 3vw;
+          }
+        }
+        .download {
+          gap: 2.5vw;
+          .cancel {
+            font-size: 3.5vw;
+            margin-top: 0.75vw;
+          }
+          .selectAll {
+            font-size: 3vw;
+          }
+          .downloadBtn {
+            margin-top: 0.75vw;
+            font-size: 3vw;
+          }
+        }
+      }
+      .bottom {
+        /* border: 1px solid black; */
+        justify-content: center;
+        gap: 3vw;
+        height: 60vw;
+        overflow-y: scroll;
+        .imgContainer {
+          height: 20vw;
+          .img {
+            border-radius: 1.5vw;
+          }
+        }
+      }
+      .seeAll {
+        font-size: 3vw;
+      }
+    }
+    .logout {
+      border-top: 0.5vw solid var(--themeColor2);
+      padding-top: 1.25vw;
+      font-size: 3vw;
+    }
+    .close {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      width: 5vw;
+    }
+  }
+}
+
+/* Additional Safari-specific styles */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    /* Safari 10.1+ */
+    .imgContainer {
+      width: auto !important;
+      .a {
+        width: auto !important;
+        .img {
+          width: auto !important;
+        }
+      }
+    }
+  }
+}

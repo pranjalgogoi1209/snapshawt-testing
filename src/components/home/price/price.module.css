@@ -1,0 +1,216 @@
+.Price {
+  padding: 4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vw;
+  position: relative;
+  background-image: url("./../../../../public/home/contact/bg.png");
+  background-position: center;
+  background-size: cover;
+  .allCredit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+  }
+
+  .singleCraditContainer {
+    position: relative;
+    width: 26%;
+    box-shadow: 0.1vw 0.1vw 0.5vw rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    padding-bottom: 1vw;
+    background-color: #fff;
+    border-radius: 2vw;
+    cursor: pointer;
+    .heading {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      padding: 1vw;
+      color: #fff;
+      height: 8vw;
+      width: 100%;
+      border-top-left-radius: 2vw;
+      border-top-right-radius: 2vw;
+      .type {
+        display: flex !important;
+        justify-content: center;
+        font-size: 2vw;
+        font-weight: 500;
+      }
+    }
+    .descriptionContainer {
+      /* border: 1px solid black; */
+      margin: 6vw 0 2vw 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .description {
+        /* border: 1px solid black; */
+        display: flex !important;
+        border-bottom: 0.1px solid var(--themeColor2);
+        padding: 0.5vw 0;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 1vw;
+        width: 100%;
+        .icon {
+          font-size: 2.5vw;
+        }
+        .desContent {
+          font-size: 1.2vw;
+          width: 100%;
+        }
+      }
+    }
+    .btn {
+      /* border: 1px solid black; */
+      width: 80%;
+      align-self: center;
+      font-size: 1.4vw;
+      font-weight: 600;
+    }
+    .creditCount {
+      position: absolute;
+      top: 5vw;
+      left: 10%;
+      box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+      padding: 1.5vw 2vw;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      width: 80%;
+      border-radius: 1vw;
+      .count {
+        /* border: 1px solid black; */
+        font-size: 2.5vw;
+        font-weight: 600;
+        text-align: center;
+      }
+      .txt {
+        /* border: 1px solid black; */
+        font-size: 1.8vw;
+        text-align: center;
+        font-weight: 600;
+      }
+    }
+    .showPopular {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+    .notShowPopular {
+      display: none;
+    }
+    .popular {
+      /* padding: 1vw; */
+      width: 6vw;
+      height: 6vw;
+      border-radius: 50%;
+      box-shadow: 0.2vw 0.2vw 0.5vw rgba(0, 0, 0, 0.5);
+      /* border: 1px solid black; */
+      text-align: center;
+      font-size: 1vw;
+      font-weight: 600;
+      position: absolute;
+      top: -7%;
+      right: -7%;
+      color: #fff;
+    }
+  }
+  .selectedCreditContainer {
+    box-shadow: 0vw 0.5vw 2vw var(--themeColor1);
+  }
+  .buyNow {
+    width: 20%;
+    border-radius: 2vw;
+    font-weight: 600;
+  }
+  .close {
+    width: 1.5vw;
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    cursor: pointer;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .Price {
+    padding: 6vw 4vw;
+    gap: 12vw;
+    .allCredit {
+      flex-direction: column;
+      gap: 12vw;
+    }
+    .singleCraditContainer {
+      width: 90%;
+      box-shadow: 0.25vw 0.25vw 1.25vw rgba(0, 0, 0, 0.4);
+      gap: 2.5vw;
+      padding-bottom: 3.5vw;
+      border-radius: 5vw;
+      .heading {
+        padding: 3.5vw;
+        height: 22vw;
+        border-top-left-radius: 5vw;
+        border-top-right-radius: 5vw;
+        .type {
+          font-size: 8vw;
+        }
+      }
+      .descriptionContainer {
+        margin: 15vw 0 5vw 0;
+        .description {
+          border-bottom: 0.25px solid var(--themeColor2);
+          padding: 2.25vw 0;
+          gap: 3.5vw;
+          .icon {
+            font-size: 8.25vw;
+          }
+          .desContent {
+            font-size: 4.2vw;
+          }
+        }
+      }
+      .btn {
+        font-size: 4vw;
+      }
+      .creditCount {
+        top: 15.5vw;
+        box-shadow: 0 0 1.25vw rgba(0, 0, 0, 0.5);
+        padding: 2vw 5vw;
+        border-radius: 2.5vw;
+        gap: 2.5vw;
+        .count {
+          font-size: 10vw;
+          font-size: 6.25vw;
+        }
+        .txt {
+          font-size: 3.75vw;
+          font-size: 4.5vw;
+        }
+      }
+      .popular {
+        width: 20vw;
+        height: 20vw;
+        box-shadow: 0.5vw 0.5vw 1.25vw rgba(0, 0, 0, 0.5);
+        font-size: 3.5vw;
+      }
+    }
+    .selectedCreditContainer {
+      box-shadow: 0vw 1vw 3vw var(--themeColor1);
+    }
+    .buyNow {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.EnhanceImage {
+  /* border: 1px solid black; */
+  display: flex;
+  padding: 4vw;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("./../../../../public/faceSwap/funny/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  .leftContainer {
+    width: 38%;
+    /* border: 1px solid black; */
+    position: relative;
+    margin: auto;
+    .imgContainer {
+      /* border: 1px solid black; */
+      width: 100%;
+      display: flex;
+      place-items: center;
+      border-radius: 1.5vw;
+      .img {
+        border-radius: 1.5vw;
+        border: 0.4vw solid #fff;
+        box-shadow: 0vw 0vw 1vw rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  .rightContainer {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 50%;
+    margin-left: 2%;
+    .txt {
+      line-height: 2.5vw;
+    }
+    .btn {
+      margin-top: 1.5vw;
+      margin-right: auto;
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .EnhanceImage {
+    flex-direction: column;
+    padding: 6vw 4vw;
+    gap: 8vw;
+    .leftContainer {
+      width: 100%;
+      .imgContainer {
+        width: 100%;
+        border-radius: 3vw;
+        .img {
+          border-radius: 3vw;
+        }
+      }
+    }
+    .rightContainer {
+      gap: 2.5vw;
+      width: 100%;
+      .txt {
+        line-height: 5vw;
+      }
+      .btn {
+        margin-top: 4vw;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 3vw;
+        border-radius: 3vw;
+      }
+    }
+  }
+}
